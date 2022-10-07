@@ -1,12 +1,100 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Takshak</title>
-</head>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Project Takshak</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+    <script>
+      function loadGoogleTranslate() {
+        new google.translate.TranslateElement("myid")
+      }
+    </script>
+  </head>
+
 <body>
-    <h1>Hey We are Group 28</h1>
+  <i  class="mobile-nav-toggle d-xl-none"><i class="fa fa-bars"><a class="poppins"></a></i></i>
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="/static/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Alex Smith</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="#" class="poppins"><i class="fa fa-phone"></i></a>
+          <a href="#" class="poppins"><i class="fa fa-instagram"></i></a>
+          <a href="#" class="poppins"><i class="fa fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <nav id="navbar" class="nav-menu navbar">
+      <ul>
+        <li><a href="http://127.0.0.1:5000/" class="nav-link scrollto active"><i class="fa fa-angle-right"></i>
+            <span>HOME</span></a></li>
+        <li><a href="http://127.0.0.1:5000/crop_recommendation" class="nav-link scrollto"><i class="fa fa-angle-right"></i>
+            <span>CROP RECOMMENDATION</span></a></li>
+        <li><a href="http://127.0.0.1:5000/yield_prediction" class="nav-link scrollto"><i class="fa fa-angle-right"></i>
+            <span>YIELD PREDICTION</span></a></li>
+        <li><a href="http://127.0.0.1:5000/disease_detection" class="nav-link scrollto"><i class="fa fa-angle-right"></i>
+            <span>DISEASES DETECTION</span></a></li>
+        <li><a href="http://127.0.0.1:5000/weed_detection" class="nav-link scrollto"><i class="fa fa-angle-right"></i>
+            <span>WEED DETECTION</span></a></li>
+        <!-- <li><div id="myid" style="color:red; width: 50%;">choose</div></li> -->
+        <li class="dropdown dropdown-content nav-link scrollto"><i id="myid" style="color:white; width: 100%"
+            class="dropdown dropdown-content">choose</i></li>
+
+    </nav>
+    </div>
+  </header>
+    <div class="container">
+        <div class="title">Yield Prediction</div>
+        <div class="content">
+            <form action="/yield_prediction" method="post" id="form1">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">State: </span>
+                        <input type="text" placeholder="Enter your State" required name="state">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Crop Year: </span>
+                        <input type="text" placeholder="Enter the year" required name="crop_year">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Season: </span>
+                        <input type="text" placeholder="Enter the Season" required name="season">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Crop: </span>
+                        <input type="text" placeholder="Enter the Crop" required name="crop">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Area: </span>
+                        <input type="text" placeholder="Enter the Area" required name="area">
+                    </div>
+                </div>
+                <div class="gender-details">
+                    <input type="radio" name="gender" id="dot-1">
+                    <input type="radio" name="gender" id="dot-2">
+                    <input type="radio" name="gender" id="dot-3">
+                    
+                </div>
+                <div class="button">
+                    <input type="submit" value="Register">
+                </div>
+            </form>
+        </div>
+    </div>
+  <script src="/static/typed.min.js"></script>
+  <script src="/static/noframework.waypoints.js"></script> -->
+  <script src="/static/main.js"></script>
 </body>
+
 </html>
