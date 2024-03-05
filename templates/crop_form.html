@@ -1,105 +1,61 @@
 <!DOCTYPE html>
-<!-- Created By CodingLab - www.codinglabweb.com -->
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Project Takshak</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/css/style.css" rel="stylesheet">
-    <link href="./static/css/main.css" rel="stylesheet">
-    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
-    <script>
-      function loadGoogleTranslate() {
-        new google.translate.TranslateElement("myid")
-      }
-    </script>
-  </head>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Crop_Prediction_Form</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/style.css" rel="stylesheet">
+
+</head>
+
 <body>
- <i  class="mobile-nav-toggle d-xl-none"><i class="fa fa-bars"><a class="poppins"></a></i></i> 
-   <header id="header">
-    <div class="d-flex flex-column">
+<form action="/crop_recommendation" method="post" id="form1">
+    <label for="n">N:</label>
+    <input type="number" name="n">
 
-      <div class="profile">
-        <img src="/static/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Alex Smith</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="#" class="poppins"><i class="fa fa-phone"></i></a>
-          <a href="#" class="poppins"><i class="fa fa-instagram"></i></a>
-          <a href="#" class="poppins"><i class="fa fa-github"></i></a>
-        </div>
-      </div>
-    </div>
-    <nav id="navbar" class="nav-menu navbar">
-      <ul>
-        <li><a href="http://127.0.0.1:5000/" class="nav-link scrollto active"><i class="fa fa-angle-right"></i>
-            <span>HOME</span></a></li>
-        <li><a href="http://127.0.0.1:5000/crop_recommendation" class="nav-link scrollto"><i class="fa fa-angle-right"></i>
-            <span>CROP RECOMMENDATION</span></a></li>
-        <li><a href="http://127.0.0.1:5000/yield_prediction" class="nav-link scrollto"><i class="fa fa-angle-right"></i>
-            <span>YIELD PREDICTION</span></a></li>
-        <li><a href="http://127.0.0.1:5000/disease_detection" class="nav-link scrollto"><i class="fa fa-angle-right"></i>
-            <span>DISEASES DETECTION</span></a></li>
-        <li><a href="http://127.0.0.1:5000/weed_detection" class="nav-link scrollto"><i class="fa fa-angle-right"></i>
-            <span>WEED DETECTION</span></a></li>
-        <li><div id="myid" style="color:red; width: 50%;">choose</div></li> 
-         <li class="dropdown dropdown-content nav-link scrollto"><i id="myid" style="color:white; width: 100%"
-            class="dropdown dropdown-content">choose</i></li> 
 
-    </nav>
-    </div>
-  </header>
-  <div class="container">
-    <div class="title">Crop Recommendation</div>
-    <div class="content">
-      <form action="/crop_recommendation" method="post" id="form1">
-        <div class="user-details">
-          <div class="input-box">
-            <span class="n">N:</span>
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange" name="n">
-          </div>
-          <div class="input-box">
-            <span class="p">P:</span>
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange" name="p">
-          </div>
-          <div class="input-box">
-            <span class="k">K:</span>
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange" name="k">
-          </div>
+    <label for="p">P:</label>
+    <input type="number" name="p">
 
-          <div class="input-box">
-            <span class="pH">pH:</span>
-            <input type="range" min="1" max="14" value="7" class="slider" id="myRange" name="ph">
-          </div>
-          <div class="input-box">
-            <span class="temperature">Temperature(°C):</span>
-            <input type="number" name="temperature"required>
-          </div>
-          <div class="input-box">
-            <span class="humidity">Humidity(g.m-3):</span>
-            <input type="number" min="1" max="15" name="humidity"required>
-          </div>
-          <div class="input-box">
-            <span class="rainfall">Rainfall(in mm):</span>
-            <input type="number" min="1" max="15" name="rainfall"required>
-          </div>
-            
-          </div>
-        </div>
-        
-        <div class="button">
-          <input type="submit" value="Submit" >
-        </div>
-      </form>
-    </div>
-  </div>
-  <!-- <script src="/static/typed.min.js"></script>
-  <script src="/static/noframework.waypoints.js"></script>
-  <script src="/static/main.js"></script> -->
+
+    <label for="k">K</label>
+    <input type="number" name="k">
+
+
+    <label for="temperature">Temperature:</label>
+    <input type="number" name="temperature">
+
+
+    <label for="humidity">Humidity:</label>
+    <input type="number" name="humidity">
+
+
+    <label for="ph">Ph:</label>
+    <input type="number" name="ph">
+    
+    <label for="rainfall">Rainfall:</label>
+    <input type="number" name="rainfall">
+<input type="submit" value="Submit">
+</form>
 </body>
-</html>
-
-  
